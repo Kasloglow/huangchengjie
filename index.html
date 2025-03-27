@@ -10,6 +10,34 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/main.js"></script>
+    <style>
+        /* Critical override styles for game container */
+        .game-container {
+            width: 100% !important;
+            max-width: 1024px !important;
+            height: 700px !important;
+        }
+        
+        .game-container iframe {
+            width: 100% !important;
+            height: 100% !important;
+            transform: scale(1) !important;
+            max-width: none !important;
+            max-height: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .game-container {
+                height: 500px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .game-container {
+                height: 400px !important;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
     <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white shadow-lg">
@@ -26,8 +54,7 @@
                         allowfullscreen="true"
                         frameborder="0"
                         scrolling="no"
-                        title="Monster Survivors Online Game"
-                        sandbox="allow-same-origin allow-scripts allow-forms allow-popups">
+                        title="Monster Survivors Online Game">
                 </iframe>
             </div>
         </section>
